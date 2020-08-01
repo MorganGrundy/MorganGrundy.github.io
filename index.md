@@ -1,37 +1,20 @@
-## Welcome to GitHub Pages
+# ![Logo](https://github.com/MorganGrundy/MosaicMagnifique/blob/master/src/MosaicMagnifique.ico) Mosaic Magnifique
 
-You can use the [editor on GitHub](https://github.com/MorganGrundy/MosaicMagnifique.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Mosaic Magnifique is an open source Photomosaic generator. It uses C++, Qt, OpenCV, and optionally CUDA.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+A Photomosaic is an image composed of many smaller images.
 
-### Markdown
+## Downloads
+The lastest release can be found here:  
+[![Logo](https://github.com/MorganGrundy/MosaicMagnifique/blob/master/src/MosaicMagnifique.ico)](https://github.com/MorganGrundy/MosaicMagnifique/releases/latest)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+Releases include:
+- Binaries for Windows 32 bit, 64 bit, and 64 bit with CUDA.  
+- Datapack containing an Image Library (.mil) and some Sample Images.
+- Source packages.
 
-```markdown
-Syntax highlighted code block
+For information on how to build the source packages you can use the [Guide](https://github.com/MorganGrundy/MosaicMagnifique/blob/master/Guide.pdf) or [README](https://github.com/MorganGrundy/MosaicMagnifique/blob/master/README.md), which are included with the source.
 
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/MorganGrundy/MosaicMagnifique.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Features
+- a
+- b
