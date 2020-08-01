@@ -1,4 +1,4 @@
-# ![Logo](https://github.com/MorganGrundy/MosaicMagnifique/blob/master/src/MosaicMagnifique.ico) Mosaic Magnifique
+# ![Logo](MosaicMagnifique.ico) Mosaic Magnifique
 
 Mosaic Magnifique is an open source Photomosaic generator. It uses C++, Qt, OpenCV, and optionally CUDA.
 
@@ -6,7 +6,7 @@ A Photomosaic is an image composed of many smaller images.
 
 ## Downloads
 The lastest release can be found here:  
-[![Logo](https://github.com/MorganGrundy/MosaicMagnifique/blob/master/src/MosaicMagnifique.ico)](https://github.com/MorganGrundy/MosaicMagnifique/releases/latest)
+[![Logo](MosaicMagnifique.ico)](https://github.com/MorganGrundy/MosaicMagnifique/releases/latest)
 
 Releases include:
 - Binaries for Windows 32 bit, 64 bit, and 64 bit with CUDA.  
