@@ -1,6 +1,10 @@
 ---
 title: Homepage
-menus: header
+menus:
+  header:
+    title: Home
+    weight: 1
+    url: /index
 ---
 
 # ![Logo](MosaicMagnifique.ico) Mosaic Magnifique
