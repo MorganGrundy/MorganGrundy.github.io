@@ -1,3 +1,8 @@
+---
+title: Homepage
+menus: header
+---
+
 # ![Logo](MosaicMagnifique.ico) Mosaic Magnifique
 
 Mosaic Magnifique is an open source Photomosaic generator. It uses C++, Qt, OpenCV, and optionally CUDA.
