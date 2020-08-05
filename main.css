@@ -59,16 +59,16 @@ ul.topnav li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	background-color: rgba(255, 0, 217, 0.7);
+	background-color: rgb(166, 0, 255);
 }
 
 /* Change color on hover */
 ul.topnav a:hover:not(.active) {
-	background-color: rgba(255, 191, 0, 0.3);
+	background-color: rgba(255, 191, 0, 0.5);
 }
 
 ul.topnav a.active {
-	background-color: rgb(166, 0, 255);
+	background-color: rgb(255, 0, 217);
 }
 
 .main-column {
