@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h2 {
+	font-size: 3em;
+}
+h3 {
+	font-size: 1.5em;
+}
+
+.flex-row {
+	display: flex;
+	flex-direction: row;
+}
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+/* Style for icon text */
+.icon-text {
+	color: white;
+	text-align: left;
+	margin: 0px;
+	padding-left: 8px;
+}
+
+/* Style the header */
+.header {
+	padding: 40px;
+	height: 600px;
+	text-align: center;
+	background-image: linear-gradient(to bottom right, rgba(166, 0, 255, 0.8), rgba(255, 191, 0, 0.8)), url('smoke.jpg');
+	background-size: cover;
+}
+
+/* Style the top navigation bar */
+ul.topnav {
+	overflow: hidden;
+	float: right;
+	list-style-type: none;
+	margin: 0px;
+}
+
+/* Push topnav to left */
+ul.topnav li {
+	float: left;
+}
+
+/* Style the topnav links */
+ul.topnav li a {
+	display: block;
+	color: #f2f2f2;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+	background-color: rgba(166, 0, 255, 0.3);
+}
+
+/* Change color on hover */
+ul.topnav a:hover:not(.active) {
+	background-color: rgba(255, 191, 0, 0.3);
+}
+
+ul.topnav a.active {
+	background-color: rgb(166, 0, 255);
+}
+
+.main-column {
+	float: left;
+	width: 80%;
+	padding: 15px;
+}
+
+.side-column {
+	float: left;
+	width: calc((100% - 80%) / 2);
+	padding: 15px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* Responsive layout */
+@media screen and (max-width:600px) {
+	/* Reduce header font size */
+	h2 {
+		font-size: 2.5em;
+	}
+	/* Makes navigation vertical */
+	ul.topnav li {
+		float: none;
+	}
+	
+	/* Removes side columns */
+	.main-column {
+		width: 100%;
+	}
+	.side-column {
+		padding: 0px;
+	}
+}
