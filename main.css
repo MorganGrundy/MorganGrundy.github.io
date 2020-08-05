@@ -92,6 +92,10 @@ ul.topnav a.active {
 
 /* Responsive layout */
 @media screen and (max-width:600px) {
+	/* Reduce header padding */
+	.header {
+		padding: 30px;
+	}
 	/* Reduce header font size */
 	h2 {
 		font-size: 2.5em;
