@@ -8,9 +8,23 @@ body {
 
 h2 {
 	font-size: 3em;
+	color:white;
+	font-family: Andale Mono, monospace;
 }
 h3 {
 	font-size: 1.5em;
+	color:white;
+	font-family: Andale Mono, monospace;
+}
+p {
+	font-size: 1.2em;
+	font-family: Andale Mono, monospace;
+}
+
+.sub-header {
+	color: black;
+	text-align: center;
+	font-family: Andale Mono, monospace;
 }
 
 .flex-row {
@@ -22,6 +36,15 @@ h3 {
 	flex-direction: column;
 }
 
+/* Style for header */
+.header {
+	padding: 40px;
+	height: 600px;
+	text-align: center;
+	background-image: linear-gradient(to bottom right, rgba(128, 0, 255, 0.8), rgba(255, 191, 0, 0.8)), url('smoke.jpg');
+	background-size: cover;
+}
+
 /* Style for icon text */
 .icon-text {
 	color: white;
@@ -30,21 +53,13 @@ h3 {
 	padding-left: 8px;
 }
 
-/* Style the header */
-.header {
-	padding: 40px;
-	height: 600px;
-	text-align: center;
-	background-image: linear-gradient(to bottom right, rgba(166, 0, 255, 0.8), rgba(255, 191, 0, 0.8)), url('smoke.jpg');
-	background-size: cover;
-}
-
-/* Style the top navigation bar */
+/* Style for navigation bar */
 ul.topnav {
 	overflow: hidden;
 	float: right;
 	list-style-type: none;
 	margin: 0px;
+	padding: 0px;
 }
 
 /* Push topnav to left */
@@ -59,24 +74,24 @@ ul.topnav li a {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
-	background-color: rgb(166, 0, 255);
+	background-color: rgb(128, 0, 255);
 }
 
 /* Change color on hover */
 ul.topnav a:hover:not(.active) {
-	background-color: rgba(255, 191, 0, 0.5);
+	background-color: rgba(80, 0, 255, 1);
 }
 
 ul.topnav a.active {
-	background-color: rgb(255, 0, 217);
+	background-color: rgb(0, 0, 255);
 }
 
+/* Content column styling */
 .main-column {
 	float: left;
 	width: 80%;
 	padding: 15px;
 }
-
 .side-column {
 	float: left;
 	width: calc((100% - 80%) / 2);
@@ -88,6 +103,15 @@ ul.topnav a.active {
 	content: "";
 	display: table;
 	clear: both;
+}
+
+figure {
+	margin: 0px 0px 40px 0px;
+}
+
+/* Style for footer */
+footer {
+	text-align: center;
 }
 
 /* Responsive layout */
