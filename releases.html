@@ -46,7 +46,36 @@
 		<div class="row">
 			<div class="side-column">
 			</div>
-			<div class="main-column">
+			<div class="main-column" id="releases">
+				<!--Example release-->
+				<div class="release-body">
+					<div class="release-header flex-row" style="justify-content: space-between;">
+						<h3>v3.0.0</h3>
+						<h3>2020-07-30</h3>
+					</div>
+					<ul class="release-list">
+						<li>
+							<a href="https://github.com/MorganGrundy/MosaicMagnifique/releases/download/v3.0.0/MosaicMagnifique-3.0.0-Windows-32bit.7z">Windows 32-bit</a>
+						</li>
+						<li>
+							<a href="https://github.com/MorganGrundy/MosaicMagnifique/releases/download/v3.0.0/MosaicMagnifique-3.0.0-Windows-64bit.7z">Windows 64-bit</a>
+						</li>
+						<li>
+							<a href="https://github.com/MorganGrundy/MosaicMagnifique/releases/download/v3.0.0/MosaicMagnifique-3.0.0-Windows-64bit-cuda.7z">Windows 64-bit w/ CUDA</a>
+						</li>
+						<li>
+							<a href="https://github.com/MorganGrundy/MosaicMagnifique/releases/download/v3.0.0/MosaicMagnifique-3.0.0-DataPack.7z">Data Pack</a>
+						</li>
+						<li>
+							<a href="https://github.com/MorganGrundy/MosaicMagnifique/archive/v3.0.0.zip">Source</a>
+						</li>
+						<li>
+							<a href="https://github.com/MorganGrundy/MosaicMagnifique/tree/v3.0.0">GitHub</a>
+						</li>
+					</ul>
+				</div>
+				<!--If JavaScript cannot run then just give link to github release page-->
+				<noscript>Sorry, your browser does not support JavaScript. You can find the releases here: <a href="https://github.com/MorganGrundy/MosaicMagnifique/releases">https://github.com/MorganGrundy/MosaicMagnifique/releases</a></noscript>
 			</div>
 			<div class="side-column">
 			</div>
@@ -56,4 +85,8 @@
 		<footer>
 			<p> Copyright © 2018-2020, Morgan Grundy </p>
 		</footer>
+		
+		<!--JavaScript to get all releases-->
+		<script src="./main.js" type="text/javascript module" async="async"></script>
+	</body>
 </html>

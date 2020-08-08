@@ -41,7 +41,11 @@ p {
 	padding: 40px;
 	height: 600px;
 	text-align: center;
-	background-image: linear-gradient(to bottom right, rgba(128, 0, 255, 0.8), rgba(255, 191, 0, 0.8)), url('smoke.jpg');
+	
+	background-color: rgb(128, 0, 255);
+	background-image: -moz-linear-gradient(-45deg, rgba(128, 0, 255, 0.8), rgba(255, 191, 0, 0.8)), url('smoke.jpg');
+	background-image: -webkit-linear-gradient(-45deg, rgba(128, 0, 255, 0.8), rgba(255, 191, 0, 0.8)), url('smoke.jpg');
+	background-image: linear-gradient(135deg, rgba(128, 0, 255, 0.8), rgba(255, 191, 0, 0.8)), url('smoke.jpg');
 	background-size: cover;
 }
 
@@ -97,7 +101,6 @@ ul.topnav a.active {
 	width: calc((100% - 80%) / 2);
 	padding: 15px;
 }
-
 /* Clear floats after the columns */
 .row:after {
 	content: "";
@@ -105,8 +108,61 @@ ul.topnav a.active {
 	clear: both;
 }
 
+/* Figure styling */
 figure {
 	margin: 0px 0px 40px 0px;
+	padding-bottom: 5px;
+	background-color: rgb(220, 220, 220);
+}
+figcaption {
+	text-align: center;
+}
+
+/* Release styling */
+.release-header {
+	-webkit-border-radius: 15px 15px 0px 0px; /* top-left top-right bottom-right bottom-left */
+	border-radius: 15px 15px 0px 0px; /* top-left top-right bottom-right bottom-left */
+	padding: 0px 24px 0px 24px; /* top right bottom left */
+	
+	background-color: rgb(128, 0, 255);
+	background-image: -moz-linear-gradient(-45deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 1));
+	background-image: -webkit-linear-gradient(-45deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 1));
+	background-image: linear-gradient(135deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 0.8));
+}
+.release-body {
+	-webkit-border-radius: 15px 15px 15px 15px; /* top-left top-right bottom-right bottom-left */
+	border-radius: 15px 15px 15px 15px; /* top-left top-right bottom-right bottom-left */
+	padding: 0px 0px 0px 0px; /* top right bottom left */
+	
+	background-color: rgb(220, 220, 220);
+}
+ul.release-list {
+	list-style: none;
+	padding: 20px;
+	padding-bottom: 36px;
+}
+ul.release-list li {
+	display: block;
+	padding: 5px;
+	text-align: center;
+}
+ul.release-list li a {
+	display: inline-block;
+	background: rgb(255, 255, 255);
+	border-radius: 50px;
+	padding: 15px;
+	width: 100%;
+	
+	color: rgb(0, 0, 0);
+	text-decoration: none;
+}
+ul.release-list li a:hover {
+	background-color: rgb(128, 0, 255);
+	background-image: -moz-linear-gradient(-45deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 1));
+	background-image: -webkit-linear-gradient(-45deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 1));
+	background-image: linear-gradient(135deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 0.8));
+	
+	color: rgb(255, 255, 255);
 }
 
 /* Style for footer */
