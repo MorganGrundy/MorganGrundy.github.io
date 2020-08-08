@@ -47,9 +47,9 @@
 			<div class="side-column">
 			</div>
 			<div class="main-column" id="releases">
-				<!--Example release-->
-				<div class="release-body">
-					<div class="release-header flex-row" style="justify-content: space-between;">
+				<!-- Example release -->
+				<!--div class="release-body">
+					<div class="release-header">
 						<h3>v3.0.0</h3>
 						<h3>2020-07-30</h3>
 					</div>
@@ -73,8 +73,8 @@
 							<a href="https://github.com/MorganGrundy/MosaicMagnifique/tree/v3.0.0">GitHub</a>
 						</li>
 					</ul>
-				</div>
-				<!--If JavaScript cannot run then just give link to github release page-->
+				</div-->
+				<!-- If JavaScript cannot run then just give link to github release page -->
 				<noscript>Sorry, your browser does not support JavaScript. You can find the releases here: <a href="https://github.com/MorganGrundy/MosaicMagnifique/releases">https://github.com/MorganGrundy/MosaicMagnifique/releases</a></noscript>
 			</div>
 			<div class="side-column">
@@ -86,7 +86,98 @@
 			<p> Copyright © 2018-2020, Morgan Grundy </p>
 		</footer>
 		
-		<!--JavaScript to get all releases-->
-		<script src="./main.js" type="text/javascript module" async="async"></script>
+		<!-- JavaScript to get all releases -->
+		<script type="module">
+			import { request } from 'https://cdn.pika.dev/@octokit/request';
+			
+			// Returns <li><a href=link>name</a></li>
+			function createLink(name, url) {
+				// Create list element
+				var listElement = document.createElement("li");
+				// Create link
+				var linkElement = document.createElement("a");
+				linkElement.setAttribute("href", url);
+				linkElement.innerHTML = name;
+				listElement.appendChild(linkElement);
+				
+				return listElement;
+			}
+			
+			// Creates release link for given asset
+			// assetName is a filename so attempts to extract most useful info from it
+			function createReleaseLink(assetName, assetUrl) {
+				var name = "";
+				
+				if (assetName.includes("DataPack")) {
+					name = "Data Pack";
+				}
+				else if (assetName.includes("Windows")) {
+					name = "Windows";
+					if (assetName.includes("32bit")) {
+						name = name + " 32-bit";
+					}
+					else if (assetName.includes("64bit")) {
+						name = name + " 64-bit";
+						if (assetName.includes("cuda")) {
+							name = name + " w/ CUDA";
+						}
+					}
+					else {
+						name = name + " Unknown";
+					}
+				}
+				
+				if (name != "") {
+					return createLink(name, assetUrl);
+				}
+				else {
+					return createLink(assetName, assetUrl);
+				}
+			}
+
+			// Gets release info from repo and builds html containers for each release
+			async function getReleases() {
+				const result = await request("GET /repos/{owner}/{repo}/releases", {
+					owner: "MorganGrundy",
+					repo: "MosaicMagnifique"
+				});
+				
+				var releaseDiv = document.getElementById("releases");
+				
+				//For every release
+				for (var release of result.data) {
+					// Create release body
+					var releaseBody = document.createElement("div");
+					releaseBody.className = "release-body";
+					releaseDiv.appendChild(releaseBody);
+					// Create release header
+					var releaseHeader = document.createElement("div");
+					releaseHeader.className = "release-header";
+					releaseBody.appendChild(releaseHeader);
+					// Create header version
+					var headerVersion = document.createElement("h3");
+					headerVersion.innerHTML = release.name;
+					releaseHeader.appendChild(headerVersion);
+					// Create header data
+					var headerDate = document.createElement("h3");
+					headerDate.innerHTML = release.published_at.split("T")[0];
+					releaseHeader.appendChild(headerDate);
+					
+					// Create release list
+					var releaseList = document.createElement("ul");
+					releaseList.className = "release-list";
+					releaseBody.appendChild(releaseList);
+					// Create links to release assets
+					for (var releaseAsset of release.assets) {
+						releaseList.appendChild(createReleaseLink(releaseAsset.browser_download_url, releaseAsset.name));
+					}
+					// Create links to source + github
+					releaseList.appendChild(createLink("Source", release.zipball_url));
+					releaseList.appendChild(createLink("GitHub", release.html_url));
+				};
+			}
+
+			getReleases();
+		</script>
 	</body>
 </html>

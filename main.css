@@ -128,6 +128,10 @@ figcaption {
 	background-image: -moz-linear-gradient(-45deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 1));
 	background-image: -webkit-linear-gradient(-45deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 1));
 	background-image: linear-gradient(135deg, rgba(128, 0, 255, 0), rgba(255, 191, 0, 0.8));
+	
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 }
 .release-body {
 	-webkit-border-radius: 15px 15px 15px 15px; /* top-left top-right bottom-right bottom-left */
