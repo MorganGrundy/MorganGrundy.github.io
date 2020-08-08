@@ -59,7 +59,37 @@
 				<hr>
 				<!-- Current Features -->
 				<h3 class="sub-header">Features</h3>
-				<p>:)</p>
+				<ul>
+					<li><p>
+					Grid Preview: Displays a preview of the Photomosaic grid structure, the cell grid is overlaid on the main image.
+					</p></li>
+					<li><p>
+					Detail Level: When comparing images a lower detail level can be used to improve performance (but reduce accuracy). This will not effect the Photomosaic resolution.
+					</p></li>
+					<li><p>
+					Mode: Controls which comparison formulae to use when comparing images. There are currently three formulae implemented (in order of increasing time complexity and result accuracy): RGB Euclidean, CIE76, CIEDE2000.
+					<br>
+					<i>Note: Depending on the contents of your Image Library you may find result accuracy to vary.</i>
+					</p></li>
+					<li><p>
+					Custom Cell Shapes: Mosaic Magnifique comes with a collection of .mcs files, which are custom cell shapes I have created. You can create your own in the 'Cell Shape' tab of the app. You provide an image that defines the cell shape, and then control how the cell is used with the following options:
+					<ul>
+						<li><p>Spacing: Number of pixels between rows and columns</p></li>
+						<li><p>Alternate Offset: Pixel offset applied to every other row and column</p></li>
+						<li><p>Cell Flipping: Horizontal & Vertical flipping of cells every other row and column</p></li>
+						<li><p>Alternate Spacing: Number of pixels between every other row and column. Allows you to pair cells horizontally & vertically.</p></li>
+					</ul>
+					</p></li>
+					<li><p>
+					Repeats: Used to make repeating images less desirable. You can set the range to look for repeats, and a value to add to difference calculations for each repeat in range.
+					</p></li>
+					<li><p>
+					Colour Visualisation: Allows you to compare colours of your Image Library and main image. Provides you with a list of colours that will improve your Image Library for the current image.
+					</p></li>
+					<li><p>
+					CUDA: If you have a <a href="https://developer.nvidia.com/cuda-gpus">CUDA-capable GPU</a> then you can use the CUDA version to create Photomosaics using your GPU. This can result in considerably faster results.
+					</p></li>
+				</ul>
 			</div>
 			<div class="side-column">
 			</div>
