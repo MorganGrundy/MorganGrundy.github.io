@@ -91,7 +91,7 @@
 		
 		<!-- JavaScript to get all releases -->
 		<script type="module">
-			import { request } from 'https://cdn.pika.dev/@octokit/request';
+			import { request } from 'https://cdn.skypack.dev/@octokit/request';
 			
 			// Returns <li><a href=link>name</a></li>
 			function createLink(name, url) {
@@ -144,6 +144,8 @@
 					owner: "MorganGrundy",
 					repo: "MosaicMagnifique"
 				});
+				
+				console.log(result);
 				
 				var releaseDiv = document.getElementById("releases");
 				
