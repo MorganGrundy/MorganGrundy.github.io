@@ -145,7 +145,7 @@
 					repo: "MosaicMagnifique"
 				});
 				
-				console.log(result);
+				// console.log(result);
 				
 				var releaseDiv = document.getElementById("releases");
 				
@@ -174,7 +174,7 @@
 					releaseBody.appendChild(releaseList);
 					// Create links to release assets
 					for (var releaseAsset of release.assets) {
-						releaseList.appendChild(createReleaseLink(releaseAsset.browser_download_url, releaseAsset.name));
+						releaseList.appendChild(createReleaseLink(releaseAsset.name, releaseAsset.browser_download_url));
 					}
 					// Create links to source + github
 					releaseList.appendChild(createLink("Source", release.zipball_url));
